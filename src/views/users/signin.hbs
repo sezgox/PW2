@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="..\..\..\css\main.css">
+{{#each errors}}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{text}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+{{/each}}
+<div class="row">
+    <div class="col-md4 mx-auto">
+        <div class="card">
+            <div class="card-header">
+               Login
+            </div>
+            <div class="card-body">
+                <form action="/users/signin" method="POST">
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" placeholder="Email" value="{{email}}"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="password" placeholder="Password" value="{{password}}"/>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
